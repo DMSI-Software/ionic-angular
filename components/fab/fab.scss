@@ -57,7 +57,7 @@ $fab-list-button-background-color:      #f4f4f4 !default;
 // --------------------------------------------------
 
 .fab[mini] {
-  @include margin(($fab-size - $fab-mini-size) / 2);
+  @include margin(calc(($fab-size - $fab-mini-size) / 2));
 
   width: $fab-mini-size;
   height: $fab-mini-size;
@@ -79,11 +79,11 @@ ion-fab {
 
   &[center] {
     @include position(null, null, null, 50%);
-    @include margin-horizontal(-$fab-size / 2, null);
+    @include margin-horizontal(calc(calc(-1 * $fab-size) / 2), null);
   }
 
   &[middle] {
-    @include margin(-$fab-size / 2, null, null, null);
+    @include margin(calc(calc(-1 * $fab-size) / 2), null, null, null);
 
     top: 50%;
   }
@@ -131,11 +131,11 @@ ion-fab {
   }
 
   &[top][edge] {
-    top: -$fab-size / 2;
+    top: calc(calc(-1 * $fab-size) / 2);
   }
 
   &[bottom][edge] {
-    bottom: -$fab-size / 2;
+    bottom: calc(calc(-1 * $fab-size) / 2);
   }
 }
 
